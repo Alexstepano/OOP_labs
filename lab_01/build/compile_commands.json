@@ -1,0 +1,50 @@
+[
+{
+  "directory": "D:/Labs/OOP_labs/lab_01/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe   -g -std=gnu++17 -o CMakeFiles\\laba01.dir\\main.cpp.obj -c D:\\Labs\\OOP_labs\\lab_01\\main.cpp",
+  "file": "D:/Labs/OOP_labs/lab_01/main.cpp",
+  "output": "CMakeFiles/laba01.dir/main.cpp.obj"
+},
+{
+  "directory": "D:/Labs/OOP_labs/lab_01/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe   -g -std=gnu++17 -o CMakeFiles\\laba01.dir\\lab_func.cpp.obj -c D:\\Labs\\OOP_labs\\lab_01\\lab_func.cpp",
+  "file": "D:/Labs/OOP_labs/lab_01/lab_func.cpp",
+  "output": "CMakeFiles/laba01.dir/lab_func.cpp.obj"
+},
+{
+  "directory": "D:/Labs/OOP_labs/lab_01/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/test01.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\test01.dir\\test.cpp.obj -c D:\\Labs\\OOP_labs\\lab_01\\test.cpp",
+  "file": "D:/Labs/OOP_labs/lab_01/test.cpp",
+  "output": "CMakeFiles/test01.dir/test.cpp.obj"
+},
+{
+  "directory": "D:/Labs/OOP_labs/lab_01/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/test01.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\test01.dir\\lab_func.cpp.obj -c D:\\Labs\\OOP_labs\\lab_01\\lab_func.cpp",
+  "file": "D:/Labs/OOP_labs/lab_01/lab_func.cpp",
+  "output": "CMakeFiles/test01.dir/lab_func.cpp.obj"
+},
+{
+  "directory": "D:/Labs/OOP_labs/lab_01/build/googletest/googlemock",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/gmock.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o CMakeFiles\\gmock.dir\\src\\gmock-all.cc.obj -c D:\\Labs\\OOP_labs\\lab_01\\googletest\\googlemock\\src\\gmock-all.cc",
+  "file": "D:/Labs/OOP_labs/lab_01/googletest/googlemock/src/gmock-all.cc",
+  "output": "googletest/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.obj"
+},
+{
+  "directory": "D:/Labs/OOP_labs/lab_01/build/googletest/googlemock",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/gmock_main.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o CMakeFiles\\gmock_main.dir\\src\\gmock_main.cc.obj -c D:\\Labs\\OOP_labs\\lab_01\\googletest\\googlemock\\src\\gmock_main.cc",
+  "file": "D:/Labs/OOP_labs/lab_01/googletest/googlemock/src/gmock_main.cc",
+  "output": "googletest/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.obj"
+},
+{
+  "directory": "D:/Labs/OOP_labs/lab_01/build/googletest/googletest",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/gtest.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o CMakeFiles\\gtest.dir\\src\\gtest-all.cc.obj -c D:\\Labs\\OOP_labs\\lab_01\\googletest\\googletest\\src\\gtest-all.cc",
+  "file": "D:/Labs/OOP_labs/lab_01/googletest/googletest/src/gtest-all.cc",
+  "output": "googletest/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.obj"
+},
+{
+  "directory": "D:/Labs/OOP_labs/lab_01/build/googletest/googletest",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/gtest_main.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o CMakeFiles\\gtest_main.dir\\src\\gtest_main.cc.obj -c D:\\Labs\\OOP_labs\\lab_01\\googletest\\googletest\\src\\gtest_main.cc",
+  "file": "D:/Labs/OOP_labs/lab_01/googletest/googletest/src/gtest_main.cc",
+  "output": "googletest/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.obj"
+}
+]
