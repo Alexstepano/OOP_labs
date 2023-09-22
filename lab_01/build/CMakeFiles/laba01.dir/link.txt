@@ -1,0 +1,3 @@
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\laba01.dir/objects.a
+C:\msys64\ucrt64\bin\ar.exe qc CMakeFiles\laba01.dir/objects.a @CMakeFiles\laba01.dir\objects1.rsp
+C:\msys64\ucrt64\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\laba01.dir/objects.a -Wl,--no-whole-archive -o laba01.exe -Wl,--out-implib,liblaba01.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\laba01.dir\linkLibs.rsp

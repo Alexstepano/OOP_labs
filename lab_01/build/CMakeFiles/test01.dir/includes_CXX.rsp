@@ -1,0 +1,1 @@
+-isystem D:/Labs/OOP_labs/lab_01/googletest/googletest/include -isystem D:/Labs/OOP_labs/lab_01/googletest/googletest -isystem D:/Labs/OOP_labs/lab_01/googletest/googlemock/include -isystem D:/Labs/OOP_labs/lab_01/googletest/googlemock
