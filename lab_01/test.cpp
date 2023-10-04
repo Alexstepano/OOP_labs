@@ -4,39 +4,39 @@
 using namespace std;
 
 
-TEST(TestGroupName, Subtest_1) {
+TEST(TestGroupName, empty_test) {
     string s = "";
     ASSERT_TRUE(s == lab_func(s));
 }
 
-TEST(TestGroupName, Subtest_2) {
+TEST(TestGroupName, simple_test_1) {
     string s = "acb";
     ASSERT_TRUE("bca" == lab_func(s));
 }
-TEST(TestGroupName, 1) {
+TEST(TestGroupName, simple_test_2) {
     string s = "aba";
     ASSERT_TRUE("bab" == lab_func(s));
 }
-TEST(TestGroupName, 2) {
+TEST(TestGroupName, c_test) {
     string s = "ccccccccc";
     ASSERT_TRUE("ccccccccc" == lab_func(s));
 }
-TEST(TestGroupName, 3) {
+TEST(TestGroupName, lab_test_2) {
     string s = "aabacbaa";
     ASSERT_TRUE("bbabcabb" == lab_func(s));
 }
-TEST(TestGroupName, 4) {
+TEST(TestGroupName, reverse_test) {
     string s = "aabacbaa", r = "";
     r = lab_func(s);
     ASSERT_TRUE("bbabcabb" == r);
     ASSERT_TRUE(s == lab_func(r));
 }
-TEST(TestGroupName, f1) {
+TEST(TestGroupName, false_test_1) {
     string s = "aabacbaa", r = "";
     r = lab_func(s);
     ASSERT_FALSE("cbabcabb" == r);
 }
-TEST(TestGroupName, f2) {
+TEST(TestGroupName, false_test_2) {
     string s = "";
     ASSERT_FALSE("c" == lab_func(s));
 }

@@ -158,8 +158,8 @@ CMakeFiles/laba01.dir/clean:
 # Target rules for target CMakeFiles/test01.dir
 
 # All Build rule for target.
-CMakeFiles/test01.dir/all: googletest/googlemock/CMakeFiles/gmock.dir/all
 CMakeFiles/test01.dir/all: googletest/googlemock/CMakeFiles/gmock_main.dir/all
+CMakeFiles/test01.dir/all: googletest/googlemock/CMakeFiles/gmock.dir/all
 CMakeFiles/test01.dir/all: googletest/googletest/CMakeFiles/gtest.dir/all
 CMakeFiles/test01.dir/all: googletest/googletest/CMakeFiles/gtest_main.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\test01.dir\build.make CMakeFiles/test01.dir/depend

@@ -111,11 +111,11 @@
 	[
 		{
 			"backtrace" : 2,
-			"id" : "gmock::@d68da25237a7ca2351af"
+			"id" : "gmock_main::@d68da25237a7ca2351af"
 		},
 		{
 			"backtrace" : 2,
-			"id" : "gmock_main::@d68da25237a7ca2351af"
+			"id" : "gmock::@d68da25237a7ca2351af"
 		},
 		{
 			"backtrace" : 2,
