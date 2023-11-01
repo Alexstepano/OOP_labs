@@ -307,7 +307,7 @@ TEST(Pentagon_test, default_constructor)
 {
     bool test = true;
     try {
-        Pentagon<int> b;
+        Pentagon<double> b;
     }
     catch (std::range_error &ex) {
         std::cerr << " new throw exception:" << ex.what() << std::endl;
@@ -328,7 +328,7 @@ TEST(Pentagon_test, Point_constructor)
     ASSERT_TRUE(true);
     test = false;
     try {
-        Pentagon b(Point(0, 0), Point(4, 0), Point(2, -3), Point(0, 0), Point(190, 9));
+        Pentagon<double> b(Point<double>(0, 0), Point<double>(4, 0), Point<double>(2, -3), Point<double>(0, 0), Point<double>(190, 9));
     }
     catch (std::logic_error &ex) {
         test = true;

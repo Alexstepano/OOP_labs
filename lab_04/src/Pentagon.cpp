@@ -1,6 +1,7 @@
 #include "../include/pentagon.hpp"
 
 template<typename T>
+requires  std::floating_point<T>
 bool Pentagon<T>::check_Pentagon(const Point<T> &a, const Point<T> &b, const Point<T> &c, const Point<T> &d, const Point<T> &e) const
 {
     double fr_side = std::sqrt((a.get_x() - b.get_x()) * (a.get_x() - b.get_x()) + (a.get_y() - b.get_y()) * (a.get_y() - b.get_y()));
@@ -14,6 +15,7 @@ bool Pentagon<T>::check_Pentagon(const Point<T> &a, const Point<T> &b, const Poi
     return true;
 }
 template<typename T>
+requires  std::floating_point<T>
 Pentagon<T>::Pentagon(const Point<T> &a, const Point<T> &b, const Point<T> &c, const Point<T> &d, const Point<T> &e)
 {//����� �� ������� �������, ������� � ����� �����
 
@@ -28,6 +30,7 @@ Pentagon<T>::Pentagon(const Point<T> &a, const Point<T> &b, const Point<T> &c, c
     _e = e;
 }
 template<typename T>
+requires  std::floating_point<T>
 Pentagon<T>::Pentagon(T _side)
 {
     if (_side <= 0) {
@@ -42,6 +45,7 @@ Pentagon<T>::Pentagon(T _side)
     _e = Point(Radius * std::cos(4 * 2 * pi / 5), Radius * std::sin(4 * 2 * pi / 5));
 }
 template<typename T>
+requires  std::floating_point<T>
 Pentagon<T>::Pentagon(const Pentagon<T> &other)
 {
     _a = other._a;
@@ -52,6 +56,7 @@ Pentagon<T>::Pentagon(const Pentagon<T> &other)
     side = other.side;
 }
 template<typename T>
+requires  std::floating_point<T>
 Pentagon<T>::Pentagon(Pentagon<T> &&other) noexcept
 {
     _a = std::move(other._a);
@@ -62,6 +67,7 @@ Pentagon<T>::Pentagon(Pentagon<T> &&other) noexcept
     side = other.side;
 }
 template<typename T>
+requires  std::floating_point<T>
 Pentagon<T> &Pentagon<T>::operator=(Pentagon<T> &&other) noexcept
 {
     _a = std::move(other._a);
@@ -74,6 +80,7 @@ Pentagon<T> &Pentagon<T>::operator=(Pentagon<T> &&other) noexcept
     return *this;
 }
 template<typename T>
+requires  std::floating_point<T>
 Pentagon<T> &Pentagon<T>::operator=(const Pentagon<T> &other)
 {
     if (this != &other) {
@@ -88,22 +95,26 @@ Pentagon<T> &Pentagon<T>::operator=(const Pentagon<T> &other)
     return *this;
 }
 template<typename T>
+requires  std::floating_point<T>
 Point<T> Pentagon<T>::geometric_center() const
 {
     return Point((_a.get_x() + _b.get_x() + _c.get_x() + _d.get_x() + _e.get_x()) / 5, (_a.get_y() + _b.get_y() + _c.get_y() + _d.get_y() + _e.get_y()) / 5);
 }
 template<typename T>
+requires  std::floating_point<T>
 double Pentagon<T>::area() const
 {
 
     return (std::sqrt(5 * (5 + 2 * (std::sqrt(5)))) * side * side) / 4;
 }
 template<typename T>
+requires  std::floating_point<T>
 Pentagon<T>::operator double() const
 {
     return (std::sqrt(5 * (5 + 2 * (std::sqrt(5)))) * side * side) / 4;
 }
 template<typename T>
+requires  std::floating_point<T>
 std::istream &operator>>(std::istream &in, Pentagon<T> &x)
 {
 
@@ -113,21 +124,25 @@ std::istream &operator>>(std::istream &in, Pentagon<T> &x)
     return in;
 }
 template<typename T>
+requires  std::floating_point<T>
 std::ostream &operator<<(std::ostream &out, const Pentagon<T> &x)
 {
     out << x._a << " " << x._b << " " << x._c << " " << x._d << " " << x._e;
     return out;
 }
 template<typename T>
+requires  std::floating_point<T>
 bool Pentagon<T>::operator==(const Pentagon<T> &other) const
 {
     return _a == other._a && _b == other._b && _c == other._c && _d == other._d && _e == other._e;
 }
 template<typename T>
+requires  std::floating_point<T>
 void  Pentagon<T>::print() const{
 std::cout<<*this;
  }
  template<typename T>
+ requires  std::floating_point<T>
 void   Pentagon<T>::read(){
 std::cin>>*this;
  }
