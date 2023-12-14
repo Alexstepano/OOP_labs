@@ -15,7 +15,7 @@ TEST(Fabric_test, fabric_test)
     array.insert(factor.factory(NpcType(1), 1, 2, "Araaasfda"));
     array.insert(factor.factory(NpcType(2), 3, 4, "Mfgfgfhgfggfa"));
     array.insert(factor.factory(NpcType(3), 5, 6, "Mgfdfgdghfgdfsgfafya"));
-    
+
     bool result = false;
 
     result = (array.size() == 3);
@@ -35,7 +35,7 @@ TEST(NPC_test, ORC_constructor_test)
     }
 
     ASSERT_TRUE(test);
-    
+
 }
 TEST(NPC_test, Druid_constructor_test)
 {
@@ -50,7 +50,7 @@ TEST(NPC_test, Druid_constructor_test)
     }
 
     ASSERT_TRUE(test);
-    
+
 }
 TEST(NPC_test, belka_constructor_test)
 {
@@ -65,7 +65,7 @@ TEST(NPC_test, belka_constructor_test)
     }
 
     ASSERT_TRUE(test);
-    
+
 }
 TEST(NPC_test, close_test)
 {
@@ -75,7 +75,7 @@ TEST(NPC_test, close_test)
 std::shared_ptr<NPC> f=std::shared_ptr<NPC>(new Orc(1,5,"P"));
     ASSERT_TRUE(a.is_close(f,10));
     ASSERT_FALSE(a.is_close(f,1));
-    
+
 }
 TEST(Visitor_test, visit_test_test)
 {
@@ -87,8 +87,8 @@ TEST(Visitor_test, visit_test_test)
     ASSERT_TRUE(1==a.accept(t));
     ASSERT_TRUE(2==t.visit(r));
     ASSERT_TRUE(2==r.accept(t));
-    
-    
+
+
 }
 TEST(Visitor_test, no_death_fight_test_test)
 {
@@ -100,7 +100,7 @@ TEST(Visitor_test, no_death_fight_test_test)
     array.insert(factor.factory(NpcType(1), 1, 2, "Araaasfda"));
     array.insert(factor.factory(NpcType(2), 3, 4, "Mfgfgfhgfggfa"));
     array.insert(factor.factory(NpcType(3), 5, 6, "Mgfdfgdghfgdfsgfafya"));
-    
+
      set_t dead = fight(array, 1);
 
     bool result = false;
@@ -108,8 +108,8 @@ TEST(Visitor_test, no_death_fight_test_test)
     result = (dead.size() == 0);
 
     EXPECT_TRUE(result);
-    
-    
+
+
 }
 TEST(Visitor_test, death_fight_test_test)
 {
@@ -121,7 +121,7 @@ TEST(Visitor_test, death_fight_test_test)
     array.insert(factor.factory(NpcType(1), 1, 2, "Araaasfda"));
     array.insert(factor.factory(NpcType(2), 3, 4, "Mfgfgfhgfggfa"));
     array.insert(factor.factory(NpcType(3), 5, 6, "Mgfdfgdghfgdfsgfafya"));
-    
+
      set_t dead = fight(array, 10);
 
     bool result = false;
@@ -129,8 +129,8 @@ TEST(Visitor_test, death_fight_test_test)
     result = (dead.size() == 2);
 
     EXPECT_TRUE(result);
-    
-    
+
+
 }
 TEST(Visitor_test, orcs_fight_test_test)
 {
@@ -142,7 +142,7 @@ TEST(Visitor_test, orcs_fight_test_test)
     array.insert(factor.factory(NpcType(3), 1, 2, "Araaasfda"));
     array.insert(factor.factory(NpcType(3), 3, 4, "Mfgfgfhgfggfa"));
     array.insert(factor.factory(NpcType(3), 5, 6, "Mgfdfgdghfgdfsgfafya"));
-    
+
      set_t dead = fight(array, 10);
 
     bool result = false;
@@ -150,8 +150,8 @@ TEST(Visitor_test, orcs_fight_test_test)
     result = (dead.size() == 0);
 
     EXPECT_TRUE(result);
-    
-    
+
+
 }
 TEST(Visitor_test, belka_and_orc_fight_test_test)
 {
@@ -163,7 +163,7 @@ TEST(Visitor_test, belka_and_orc_fight_test_test)
     array.insert(factor.factory(NpcType(1), 1, 2, "Araaasfda"));
     array.insert(factor.factory(NpcType(1), 3, 4, "Mfgfgfhgfggfa"));
     array.insert(factor.factory(NpcType(3), 5, 6, "Mgfdfgdghfgdfsgfafya"));
-    
+
      set_t dead = fight(array, 10);
 
     bool result = false;
@@ -171,8 +171,8 @@ TEST(Visitor_test, belka_and_orc_fight_test_test)
     result = (dead.size() == 0);
 
     EXPECT_TRUE(result);
-    
-    
+
+
 }
 TEST(Visitor_test, belka_and_druid_fight_test_test)
 {
@@ -184,7 +184,7 @@ TEST(Visitor_test, belka_and_druid_fight_test_test)
     array.insert(factor.factory(NpcType(1), 1, 2, "Araaasfda"));
     array.insert(factor.factory(NpcType(1), 3, 4, "Mfgfgfhgfggfa"));
     array.insert(factor.factory(NpcType(2), 5, 6, "Mgfdfgdghfgdfsgfafya"));
-    
+
      set_t dead = fight(array, 10);
 
     bool result = false;
@@ -192,8 +192,8 @@ TEST(Visitor_test, belka_and_druid_fight_test_test)
     result = (dead.size() == 2);
 
     EXPECT_TRUE(result);
-    
-    
+
+
 }
 TEST(Visitor_test, orc_and_druid_fight_test_test)
 {
@@ -205,7 +205,7 @@ TEST(Visitor_test, orc_and_druid_fight_test_test)
     array.insert(factor.factory(NpcType(3), 1, 2, "Araaasfda"));
     array.insert(factor.factory(NpcType(2), 3, 4, "Mfgfgfhgfggfa"));
     array.insert(factor.factory(NpcType(3), 5, 6, "Mgfdfgdghfgdfsgfafya"));
-    
+
      set_t dead = fight(array, 10);
 
     bool result = false;
@@ -213,8 +213,8 @@ TEST(Visitor_test, orc_and_druid_fight_test_test)
     result = (dead.size() == 1);
 
     EXPECT_TRUE(result);
-    
-    
+
+
 }
 /*
 TEST(vector_test, Constructor_default_vector_allocator)
