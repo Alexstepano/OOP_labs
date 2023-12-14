@@ -16,7 +16,7 @@ TEST(Fabric_test, fabric_test)
     array.insert(factor.factory(NpcType(1), 1, 2, "Araaasfda"));
     array.insert(factor.factory(NpcType(2), 3, 4, "Mfgfgfhgfggfa"));
     array.insert(factor.factory(NpcType(3), 5, 6, "Mgfdfgdghfgdfsgfafya"));
-    
+
     bool result = false;
 
     result = (array.size() == 3);
@@ -36,7 +36,7 @@ TEST(NPC_test, ORC_constructor_test)
     }
 
     ASSERT_TRUE(test);
-    
+
 }
 TEST(NPC_test, Druid_constructor_test)
 {
@@ -51,7 +51,7 @@ TEST(NPC_test, Druid_constructor_test)
     }
 
     ASSERT_TRUE(test);
-    
+
 }
 TEST(NPC_test, belka_constructor_test)
 {
@@ -66,7 +66,7 @@ TEST(NPC_test, belka_constructor_test)
     }
 
     ASSERT_TRUE(test);
-    
+
 }
 TEST(NPC_test, close_test)
 {
@@ -76,7 +76,7 @@ TEST(NPC_test, close_test)
 std::shared_ptr<NPC> f=std::shared_ptr<NPC>(new Orc(1,5,"P"));
     ASSERT_TRUE(a.is_close(f,10));
     ASSERT_FALSE(a.is_close(f,1));
-    
+
 }
 TEST(Visitor_test, visit_test_test)
 {
@@ -88,8 +88,8 @@ TEST(Visitor_test, visit_test_test)
     ASSERT_TRUE(1==a.accept(t));
     ASSERT_TRUE(2==t.visit(r));
     ASSERT_TRUE(2==r.accept(t));
-    
-    
+
+
 }
 TEST(Visitor_test, Move_visitor_1)
 {
@@ -103,12 +103,12 @@ MoveVisitor visitor;
     (*array.begin())->is_alive();
      (*array.begin())->accept(visitor);
   std::pair<int,int> tempo=(*array.begin())->position();
-    
+
 
     EXPECT_TRUE(abs(abs(max(tempo.first,temp.first))-abs(min(tempo.first,temp.first)))<=10);
-    
+
     EXPECT_TRUE(abs(abs(max(tempo.second,temp.second))-abs(min(tempo.second,temp.second)))<=10);
-    
+
 }
 TEST(Visitor_test, Move_visitor_2)
 {
@@ -122,12 +122,12 @@ MoveVisitor visitor;
     (*array.begin())->is_alive();
      (*array.begin())->accept(visitor);
   std::pair<int,int> tempo=(*array.begin())->position();
-    
+
 
     EXPECT_TRUE(abs(abs(max(tempo.first,temp.first))-abs(min(tempo.first,temp.first)))<=5);
-    
+
     EXPECT_TRUE(abs(abs(max(tempo.second,temp.second))-abs(min(tempo.second,temp.second)))<=5);
-    
+
 }
 TEST(Visitor_test, Move_visitor_3)
 {
@@ -141,12 +141,12 @@ MoveVisitor visitor;
     (*array.begin())->is_alive();
      (*array.begin())->accept(visitor);
   std::pair<int,int> tempo=(*array.begin())->position();
-    
+
 
     EXPECT_TRUE(abs(abs(max(tempo.first,temp.first))-abs(min(tempo.first,temp.first)))<=20);
-    
+
     EXPECT_TRUE(abs(abs(max(tempo.second,temp.second))-abs(min(tempo.second,temp.second)))<=20);
-    
+
 }
 TEST(Visitor_test, Move_visitor_3_dead)
 {
@@ -156,17 +156,17 @@ TEST(Visitor_test, Move_visitor_3_dead)
     Factory factor;
 MoveVisitor visitor;
     array.insert(factor.factory(NpcType(3), 1, 2, "Araaasfda"));
-    
+
     std::pair<int,int> temp=(*array.begin())->position();
     (*array.begin())->must_die();
   EXPECT_FALSE(   (*array.begin())->accept(visitor));
   std::pair<int,int> tempo=(*array.begin())->position();
-    
+
 
     EXPECT_TRUE(abs(abs(max(tempo.first,temp.first))-abs(min(tempo.first,temp.first)))==0);
-    
+
     EXPECT_TRUE(abs(abs(max(tempo.second,temp.second))-abs(min(tempo.second,temp.second)))==0);
-    
+
 }
 TEST(Visitor_test, Move_visitor_2_dead)
 {
@@ -176,17 +176,17 @@ TEST(Visitor_test, Move_visitor_2_dead)
     Factory factor;
 MoveVisitor visitor;
     array.insert(factor.factory(NpcType(2), 1, 2, "Araaasfda"));
-    
+
     std::pair<int,int> temp=(*array.begin())->position();
     (*array.begin())->must_die();
   EXPECT_FALSE(   (*array.begin())->accept(visitor));
   std::pair<int,int> tempo=(*array.begin())->position();
-    
+
 
     EXPECT_TRUE(abs(abs(max(tempo.first,temp.first))-abs(min(tempo.first,temp.first)))==0);
-    
+
     EXPECT_TRUE(abs(abs(max(tempo.second,temp.second))-abs(min(tempo.second,temp.second)))==0);
-    
+
 }
 TEST(Visitor_test, Move_visitor_1_dead)
 {
@@ -196,17 +196,17 @@ TEST(Visitor_test, Move_visitor_1_dead)
     Factory factor;
 MoveVisitor visitor;
     array.insert(factor.factory(NpcType(1), 1, 2, "Araaasfda"));
-    
+
     std::pair<int,int> temp=(*array.begin())->position();
     (*array.begin())->must_die();
   EXPECT_FALSE(   (*array.begin())->accept(visitor));
   std::pair<int,int> tempo=(*array.begin())->position();
-    
+
 
     EXPECT_TRUE(abs(abs(max(tempo.first,temp.first))-abs(min(tempo.first,temp.first)))==0);
-    
+
     EXPECT_TRUE(abs(abs(max(tempo.second,temp.second))-abs(min(tempo.second,temp.second)))==0);
-    
+
 }
 TEST(Visitor_test, distance_1_test)
 {
@@ -223,9 +223,9 @@ TEST(Visitor_test, distance_1_test)
      EXPECT_TRUE(attacker->accept(distance)==5);
      }
 
-    
-    
-    
+
+
+
 }
 TEST(Visitor_test, _2_distance_test)
 {
@@ -242,9 +242,9 @@ TEST(Visitor_test, _2_distance_test)
      EXPECT_TRUE(attacker->accept(distance)==10);
      }
 
-    
-    
-    
+
+
+
 }
 TEST(Visitor_test, dead_2_distance_test)
 {
@@ -262,14 +262,14 @@ TEST(Visitor_test, dead_2_distance_test)
      EXPECT_TRUE(attacker->accept(distance)==10);
      }
 
-    
-    
-    
+
+
+
 }
 TEST(Visitor_test, distance_vistiro_close_test)
 {
 
-     
+
 
 std::shared_ptr<NPC> f=std::shared_ptr<NPC>(new Orc(1,5,"P"));
 std::shared_ptr<NPC> f1=std::shared_ptr<NPC>(new Squirrel(10,5,"P"));
@@ -289,7 +289,7 @@ pair1.second=f1;
 TEST(Visitor_test, map_vistiro_1_test)
 {
 
-     
+
 
 std::shared_ptr<NPC> f=std::shared_ptr<NPC>(new Orc(1,5,"P"));
 
@@ -302,7 +302,7 @@ MapMoveVisitor distance;
 TEST(Visitor_test, map_vistiro_2_test)
 {
 
-     
+
 
 std::shared_ptr<NPC> f=std::shared_ptr<NPC>(new Squirrel(1,5,"P"));
 
@@ -315,7 +315,7 @@ MapMoveVisitor distance;
 TEST(Visitor_test, map_vistiro_3_test)
 {
 
-     
+
 
 std::shared_ptr<NPC> f=std::shared_ptr<NPC>(new Druid(1,5,"P"));
 
@@ -336,7 +336,7 @@ TEST(Visitor_test, orcs_fight_test_test)
     array.insert(factor.factory(NpcType(3), 1, 2, "Araaasfda"));
     array.insert(factor.factory(NpcType(3), 3, 4, "Mfgfgfhgfggfa"));
     array.insert(factor.factory(NpcType(3), 5, 6, "Mgfdfgdghfgdfsgfafya"));
-    
+
      set_t dead = fight(array, 10);
 
     bool result = false;
@@ -344,8 +344,8 @@ TEST(Visitor_test, orcs_fight_test_test)
     result = (dead.size() == 0);
 
     EXPECT_TRUE(result);
-    
-    
+
+
 }
 TEST(Visitor_test, belka_and_orc_fight_test_test)
 {
@@ -357,7 +357,7 @@ TEST(Visitor_test, belka_and_orc_fight_test_test)
     array.insert(factor.factory(NpcType(1), 1, 2, "Araaasfda"));
     array.insert(factor.factory(NpcType(1), 3, 4, "Mfgfgfhgfggfa"));
     array.insert(factor.factory(NpcType(3), 5, 6, "Mgfdfgdghfgdfsgfafya"));
-    
+
      set_t dead = fight(array, 10);
 
     bool result = false;
@@ -365,8 +365,8 @@ TEST(Visitor_test, belka_and_orc_fight_test_test)
     result = (dead.size() == 0);
 
     EXPECT_TRUE(result);
-    
-    
+
+
 }
 TEST(Visitor_test, belka_and_druid_fight_test_test)
 {
@@ -378,7 +378,7 @@ TEST(Visitor_test, belka_and_druid_fight_test_test)
     array.insert(factor.factory(NpcType(1), 1, 2, "Araaasfda"));
     array.insert(factor.factory(NpcType(1), 3, 4, "Mfgfgfhgfggfa"));
     array.insert(factor.factory(NpcType(2), 5, 6, "Mgfdfgdghfgdfsgfafya"));
-    
+
      set_t dead = fight(array, 10);
 
     bool result = false;
@@ -386,8 +386,8 @@ TEST(Visitor_test, belka_and_druid_fight_test_test)
     result = (dead.size() == 2);
 
     EXPECT_TRUE(result);
-    
-    
+
+
 }
 TEST(Visitor_test, orc_and_druid_fight_test_test)
 {
@@ -399,7 +399,7 @@ TEST(Visitor_test, orc_and_druid_fight_test_test)
     array.insert(factor.factory(NpcType(3), 1, 2, "Araaasfda"));
     array.insert(factor.factory(NpcType(2), 3, 4, "Mfgfgfhgfggfa"));
     array.insert(factor.factory(NpcType(3), 5, 6, "Mgfdfgdghfgdfsgfafya"));
-    
+
      set_t dead = fight(array, 10);
 
     bool result = false;
@@ -407,8 +407,8 @@ TEST(Visitor_test, orc_and_druid_fight_test_test)
     result = (dead.size() == 1);
 
     EXPECT_TRUE(result);
-    
-    
+
+
 }
 /*
 TEST(vector_test, Constructor_default_vector_allocator)
